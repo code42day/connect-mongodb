@@ -11,8 +11,8 @@
   	"url": "git://github.com/masylum/connect-mongodb.git"
   },
   "dependencies": {
-  	"mongodb": "1.2.x",
-  	"connect": ">=1.8.5 <2"
+  	"mongodb": "~1",
+  	"connect": "~2"
   },
   "devDependencies": {
   	"testosterone": "1.2.0",
