@@ -3,11 +3,11 @@
 connect-mongodb is a mongoDB session store backed by [node-mongodb-native](http://github.com/christkv/node-mongodb-native).
 
 Originally written by [dvv](http://github.com/dvv)
+With changes by [Nathan Bowser](https://github.com/nathanbowser)
 
-## Version 1.*
+## Version 2.*
 
-This version is not compatible with `0.*` versions. Now you must pass a mongodb connection, or server configuration.
-On updating, i recomment to delete your current sessions collection data.
+Removed dependency on specific connect version (easier updates).
 
 ## Installation
 
@@ -46,7 +46,7 @@ You have a complete example on `example/index.js`.
       , Server = require('mongodb').Server
       , server_config = new Server('localhost', 27017, {auto_reconnect: true, native_parser: true})
       , db = new Db('test', server_config, {})
-      , mongoStore = require('connect-mongodb');
+      , mongoStore = require('connect-mongodb')(connect);
 
     connect.createServer(
       connect.bodyParser(),
@@ -59,8 +59,6 @@ You have a complete example on `example/index.js`.
     );
 
 ## Tests
-
-This library is being tested using [testosterone](https://github.com/masylum/testosterone).
 
 To run the tests:
 

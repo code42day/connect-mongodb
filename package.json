@@ -3,9 +3,20 @@
   "description": "mongodb session store for connect",
   "version": "2.0.0-furkot",
   "author": "Vladimir Dronnikov <dronnikov@gmail.com>",
-  "contributors": ["Pau Ramon <masylum@gmail.com>", "ramv"],
-  "repository": {"type": "git", "url": "git://github.com/masylum/connect-mongodb.git"},
-  "dependencies": {"mongodb": "~1", "connect": "~2"},
-  "devDependencies": {"mocha": "~1.3.0"},
+  "contributors": [
+    "Pau Ramon <masylum@gmail.com>",
+    "ramv"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/masylum/connect-mongodb.git"
+  },
+  "dependencies": {
+    "mongodb": "~1"
+  },
+  "devDependencies": {
+    "connect": "~2",
+    "mocha": "~1.3.0"
+  },
   "main": "./lib/connect-mongodb"
 }

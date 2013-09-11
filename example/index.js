@@ -1,7 +1,7 @@
 var util = require('util')
   , http = require('http')
   , connect = require('connect')
-  , mongoStore = require('../lib/connect-mongodb')
+  , mongoStore = require('../lib/connect-mongodb')(connect)
   , Db = require('mongodb').Db
   , Server = require('mongodb').Server
   , server_config = new Server('localhost', 27017, {auto_reconnect: true, native_parser: true})

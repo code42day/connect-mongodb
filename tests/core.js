@@ -3,7 +3,8 @@ var assert = require('assert')
   , Server = require('mongodb').Server
   , server_config = new Server('localhost', 27017, {auto_reconnect: true, native_parser: true})
   , url = 'mongodb://localhost:27017/test'
-  , connect_mongodb = require('..')
+  , connect = require('connect')
+  , connect_mongodb = require('..')(connect)
   , db = new Db('test', server_config, {});
 
 describe('mongodb connect', function () {
