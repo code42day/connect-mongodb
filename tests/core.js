@@ -5,7 +5,7 @@ var assert = require('assert')
   , url = 'mongodb://localhost:27017/test'
   , connect = require('connect')
   , connect_mongodb = require('..')(connect)
-  , db = new Db('test', server_config, {});
+  , db = new Db('test', server_config, {w: 0});
 
 describe('mongodb connect', function () {
   store = undefined;
